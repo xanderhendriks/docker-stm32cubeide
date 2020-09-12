@@ -6,6 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ENV STM32CUBEIDE_VERSION 1.4.0
 
+ENV PATH="${PATH}:/opt/st/stm32cubeide_${STM32CUBEIDE_VERSION}"
+
 RUN apt-get -y update && \
 	apt-get -y install unzip curl expect
 
@@ -19,9 +21,7 @@ COPY noninteractive-install.sh .
 # Using expect to install STM32 Cube IDE automatically.
 RUN chmod +x noninteractive-install.sh /tmp/stm32cubeide-installer.sh && \
     ./noninteractive-install.sh && \
-    rm /tmp/stm32cubeide-installer.sh noninteractive-install.sh &&\
-
-ENV PATH="${PATH}:/opt/st/stm32cubeide_${STM32CUBEIDE_VERSION}"
+    rm /tmp/stm32cubeide-installer.sh noninteractive-install.sh
 
 # Install dependencies
 RUN apt-get -y -f install
