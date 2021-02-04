@@ -1,15 +1,13 @@
-FROM debian:jessie
+FROM ubuntu:18.04
 
 MAINTAINER Xander Hendriks <xander.hendriks@nx-solutions.com>
-
-ENV DEBIAN_FRONTEND noninteractive
 
 ENV STM32CUBEIDE_VERSION 1.5.1
 
 ENV PATH="${PATH}:/opt/st/stm32cubeide_${STM32CUBEIDE_VERSION}"
 
 RUN apt-get -y update && \
-	apt-get -y install unzip curl expect
+	apt-get -y install zip curl expect
 
 # Download and install STM32 Cube IDE
 # Downloaded from test.nx-solutions.com

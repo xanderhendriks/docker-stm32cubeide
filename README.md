@@ -12,9 +12,7 @@ To create the image `xanderhendriks/stm32cubeide`, execute the following command
 
     docker build -t xanderhendriks/stm32cubeide .
 
-You can now push the new image to the public registry:
-    
-    docker push xanderhendriks/stm32cubeide
+You can now tag the repo for a new build to be started on the docker hub
 
 
 Run
@@ -23,6 +21,6 @@ Run
     $ docker pull xanderhendriks/stm32cubeide
 
     $ docker run -it --name stm32cubeide \
-        -v /path/to/mplab/projects:/path/to/mplab/projects \
+        -v c:\GIT\repo:/workspace \
         xanderhendriks/stm32cubeide
 
