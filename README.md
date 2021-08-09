@@ -12,7 +12,9 @@ To create the image `xanderhendriks/stm32cubeide`, execute the following command
 
     docker build -t xanderhendriks/stm32cubeide .
 
-You can now tag the repo for a new build to be started on the docker hub
+You can now tag the repo and push the changes to the docker hub:
+
+    docker push xanderhendriks/stm32cubeide:4.0
 
 
 Run
