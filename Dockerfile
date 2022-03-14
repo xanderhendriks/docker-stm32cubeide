@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 MAINTAINER Xander Hendriks <xander.hendriks@nx-solutions.com>
 
-ENV STM32CUBEIDE_VERSION=1.8.0
+ENV STM32CUBEIDE_VERSION=1.9.0
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -16,7 +16,7 @@ RUN apt-get -y update && \
 	apt-get -y install zip curl
 
 # Download and install STM32 Cube IDE
-RUN curl --insecure -o /tmp/stm32cubeide-installer.sh.zip "https://test.nx-solutions.com/en.st-stm32cubeide_1.8.0_11526_20211125_0815_amd64.deb_bundle.sh_v1.8.0.zip" && \
+RUN curl --insecure -o /tmp/stm32cubeide-installer.sh.zip "https://test.nx-solutions.com/en.st-stm32cubeide_1.9.0_12015_20220302_0855_amd64.deb_bundle.sh_v1.9.0.zip" && \
     unzip -p /tmp/stm32cubeide-installer.sh.zip > /tmp/stm32cubeide-installer.sh && rm /tmp/stm32cubeide-installer.sh.zip
 
 # Using expect to install STM32 Cube IDE automatically.
