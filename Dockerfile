@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 LABEL org.opencontainers.image.authors="Xander Hendriks <xander.hendriks@nx-solutions.com>"
 
-ENV STM32CUBEIDE_VERSION=1.11.2
+ENV STM32CUBEIDE_VERSION=1.12.1
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -15,7 +15,7 @@ ENV PATH="${PATH}:/opt/st/stm32cubeide_${STM32CUBEIDE_VERSION}"
 RUN apt-get -y update && \
 	apt-get -y install zip
 
-COPY en.st-stm32cubeide_1.11.2_14494_20230119_0724.unsigned_amd64.deb_bundle.sh.zip /tmp/stm32cubeide-installer.sh.zip
+COPY en.st-stm32cubeide_1.12.1_16088_20230420_1057_amd64.deb_bundle.sh.zip /tmp/stm32cubeide-installer.sh.zip
 
 # Unzip STM32 Cube IDE and delete zip file
 RUN unzip -p /tmp/stm32cubeide-installer.sh.zip > /tmp/stm32cubeide-installer.sh && rm /tmp/stm32cubeide-installer.sh.zip
