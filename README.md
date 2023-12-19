@@ -39,3 +39,9 @@ The major.minor version number indicates the version of the underlying [STM32Cub
 - 11.0: STM32 Cube IDE: 1.14.0
 
 NOTE: Bug fixes are only implemented for older versions if requested.
+
+## Usage
+To build your application from the command line execute the following commands:
+
+    stm32cubeide --launcher.suppressErrors -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data /tmp/stm-workspace -import /workspace/applications/sample_application/targets/STM32
+    headless-build.sh -data /tmp/stm-workspace -build sample_application/Debug
