@@ -1,4 +1,4 @@
-ARG IMAGE=ubuntu:22.04
+ARG IMAGE=ubuntu:24.04
 
 # Use base image as extractor for the zip file
 FROM ${IMAGE} AS base
