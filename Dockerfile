@@ -23,7 +23,7 @@ LABEL org.opencontainers.image.authors="Xander Hendriks <xander.hendriks@nx-solu
 
 # Install dependencies
 RUN apt-get -y update && \
-	apt-get -y install
+	apt-get -y install gcc g++
 
 COPY --from=base /tmp/stm32cubeide-installer.sh /tmp
 
