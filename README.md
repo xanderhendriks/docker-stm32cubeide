@@ -49,3 +49,6 @@ To build your application from the command line execute the following commands:
 
     stm32cubeide --launcher.suppressErrors -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data /tmp/stm-workspace -import /workspace/applications/sample_application/targets/STM32
     headless-build.sh -data /tmp/stm-workspace -build sample_application/Debug
+
+### Example code
+To see how to use this docker image with the help of [action-build-stm32cubeide](https://github.com/xanderhendriks/action-build-stm32cubeide) in a github ci pipeline have a look at [stm32-sample-application](https://github.com/xanderhendriks/stm32-sample-application).
