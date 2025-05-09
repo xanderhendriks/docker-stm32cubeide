@@ -23,6 +23,21 @@ You can now tag the repo and push the changes to the docker hub:
         -v c:\GIT\repo:/workspace \
         xanderhendriks/stm32cubeide
 
+### Running with GUI support
+
+    $ docker run -it --name stm32cubeide \
+        -v c:\GIT\repo:/workspace \
+        -v /tmp/.X11-unix:/tmp/.X11-unix \
+        xanderhendriks/stm32cubeide
+
+#### Start stm32cubeide when running the docker
+
+    $ docker run -it --name stm32cubeide \
+        -v c:\GIT\repo:/workspace \
+        -v /tmp/.X11-unix:/tmp/.X11-unix \
+        xanderhendriks/stm32cubeide stm32cubeide
+
+
 ## STM32 Cube IDE Versions
 
 The major.minor version number indicates the version of the underlying [STM32CubeIde docker image](https://hub.docker.com/repository/docker/xanderhendriks/stm32cubeide) being used. The bug fix number shows updates to this build action only:
@@ -42,6 +57,7 @@ The major.minor version number indicates the version of the underlying [STM32Cub
 - 13.1: STM32 Cube IDE: 1.16.0 - Reduced size
 - 14.0: STM32 Cube IDE: 1.17.0
 - 15.0: STM32 Cube IDE: 1.18.0
+- 15.1: STM32 Cube IDE: 1.18.1 - Allows running of stm32cubeide GUI on xserver
 
 NOTE: Bug fixes are only implemented for older versions if requested.
 
