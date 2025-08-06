@@ -8,11 +8,11 @@ Environment docker container.
 To create the image `xanderhendriks/stm32cubeide`, execute the following command in the
 `docker-stm32cubeide` folder:
 
-    docker build -t xanderhendriks/stm32cubeide .
+    docker buildx build -t xanderhendriks/stm32cubeide .
 
 You can now tag the repo and push the changes to the docker hub:
 
-    docker build -t xanderhendriks/stm32cubeide:4.0 .
+    docker buildx build -t xanderhendriks/stm32cubeide:4.0 .
     docker push xanderhendriks/stm32cubeide:4.0
 
 ## Run
@@ -58,6 +58,7 @@ The major.minor version number indicates the version of the underlying [STM32Cub
 - 14.0: STM32 Cube IDE: 1.17.0
 - 15.0: STM32 Cube IDE: 1.18.0
 - 15.1: STM32 Cube IDE: 1.18.1 - Allows running of stm32cubeide GUI on xserver
+- 16.0: STM32 Cube IDE: 1.19.0 - Allows running of stm32cubeide GUI on xserver
 
 NOTE: Bug fixes are only implemented for older versions if requested.
 
